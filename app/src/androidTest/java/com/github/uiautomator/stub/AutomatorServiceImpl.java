@@ -204,7 +204,7 @@ public class AutomatorServiceImpl implements AutomatorService {
             return false;
         }
         touchController.touchDown(x, y);
-        SystemClock.sleep(100); // normally 100ms for click
+        SystemClock.sleep(15); // 为了提高点击性能，把原来的 100ms ==> 改成 15ms
         return touchController.touchUp(x, y);
     }
 
